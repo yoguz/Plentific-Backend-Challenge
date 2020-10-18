@@ -10,3 +10,6 @@
 # Venv
 venv
 backend/venv
+
+# IDEA
+backend/.idea
