@@ -8,6 +8,7 @@ from dateutil.rrule import rrule, MONTHLY
 
 
 def index(request):
+    print("This is for Heroku debug")
     return HttpResponse("Hello, world. You're at the polls index.")
 
 
