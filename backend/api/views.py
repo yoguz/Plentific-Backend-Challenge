@@ -2,7 +2,7 @@ from bisect import bisect_right, bisect_left
 import json
 from django.db.models import Avg
 from django.http import HttpResponse
-from .models import Transaction, Postcode, Date, Chart1, Chart2
+from .models import Transaction, Postcode, Date
 import datetime
 from dateutil.rrule import rrule, MONTHLY
 
@@ -166,7 +166,6 @@ def test_lower_end(request):
 def update_tables(request):
     update_postcodes()
     update_dates()
-    pass
 
 
 def update_postcodes():
