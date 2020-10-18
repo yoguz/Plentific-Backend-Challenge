@@ -14,3 +14,4 @@ backend/venv
 # IDEA
 backend/.idea
 .idea
+*.iml
