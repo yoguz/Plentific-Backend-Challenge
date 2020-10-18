@@ -1,0 +1,12 @@
+# Text backup files
+*.bak
+
+# CSV files
+*.csv
+
+# DS_store
+.DS_Store
+
+# Venv
+venv
+backend/venv
