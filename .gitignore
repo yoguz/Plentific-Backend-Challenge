@@ -15,3 +15,6 @@ backend/venv
 backend/.idea
 .idea
 *.iml
+
+# Data
+data
