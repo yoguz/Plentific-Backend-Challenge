@@ -260,3 +260,18 @@ def update_dates():
             print("ERR. Date:", date, " can not saved.")
 
     print('dates are updated.')
+
+
+def trim_postcodes(request):
+    print('trimming postcodes...')
+    try:
+        postcodes = Postcode.objects.all()
+        for postcode in postcodes:
+            postcode.postcode = postcode.postcode.strip()
+            postcode.save()
+
+        print('trimming postcodes SUCCESSFUL...')
+    except:
+        print('trimming postcodes FAILED...')
+
+    return HttpResponse()
