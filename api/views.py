@@ -13,24 +13,38 @@ def index(request):
 
 
 def get_postcodes(request):
-    postcodes = Postcode.objects.all().order_by('postcode')
+    print('getting postcodes...')
     postcode_list = list()
-    for postcode in postcodes:
-        if postcode.postcode is not None and len(postcode.postcode) > 0:
-            postcode_list.append(postcode.postcode)
+    try:
+        postcodes = Postcode.objects.all().order_by('postcode')
+        print('postcode fetch completed...')
 
-    j = json.dumps(postcode_list)
-    return HttpResponse(j)
+        for postcode in postcodes:
+            if postcode.postcode is not None and len(postcode.postcode) > 0:
+                postcode_list.append(postcode.postcode)
+
+        print('getting postcodes SUCCESSFUL...')
+    except:
+        print('getting postcodes FAILED...')
+
+    return HttpResponse(json.dumps(postcode_list))
 
 
 def get_dates(request):
-    dates = Date.objects.all().order_by('date')
+    print('getting dates...')
     date_list = list()
-    for date in dates:
-        date_list.append(date.date_str)
+    try:
+        dates = Date.objects.all().order_by('date')
+        print('date fetch completed...')
 
-    j = json.dumps(date_list)
-    return HttpResponse(j)
+        for date in dates:
+            date_list.append(date.date_str)
+
+        print('getting dates SUCCESSFUL...')
+    except:
+        print('getting dates FAILED...')
+
+    return HttpResponse(json.dumps(date_list))
 
 
 def get_avg_prices(request):
