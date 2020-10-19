@@ -158,7 +158,8 @@ def get_transaction_counts(request):
                     f'£{int((price_list[lower] + (period * i)) / 1000)}k - £{int((price_list[lower] + (period * (i + 1))) / 1000)}k')
             labels.append(f'Over £{int((price_list[lower] + period * 7) / 1000)}k')
 
-            count_prev = 0
+            count_prev = lower
+            values.append(count_prev)
             for i in range(1, 7):
                 count = bisect_left(price_list, price_list[0] + (period * i)) - count_prev
                 values.append(count)
@@ -176,7 +177,7 @@ def get_transaction_counts(request):
             labels.append(f'Over £{int((price_list[lower] + period * 7) / 1000)}k')
 
             count_prev = 0
-            for i in range(1, 7):
+            for i in range(1, 8):
                 count = bisect_left(price_list, price_list[0] + (period * i)) - count_prev
                 values.append(count)
                 count_prev += count
