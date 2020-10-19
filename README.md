@@ -11,7 +11,7 @@
  
    This API is a HTTP GET request. It provides postcodes for both chart's later querying in a JSON array format. There are currently 2391 postcodes in the DB. The result format looks like :
    
-   ["AL1 ", "AL10 ", "AL2 ", "AL3 ", "AL4 ", "AL5 ", "AL6 ", "AL7 ", "AL8 ", "AL9 ", "B1 ", "B10 ", "B11 ", "B12 ", "B13 ", "B14 ".. ]
+   ["AL1", "AL10", "AL2", "AL3", "AL4", "AL5", "AL6", "AL7", "AL8", "AL9", "B1", "B10" .. ]
    
 2. /get_dates
  
@@ -24,7 +24,7 @@
    This API is a HTTP POST request. It provides data for chart 1 in the Backend Code Challenge. The body in request must look like:
    
     {
-     "postcode":"AL1 ",
+     "postcode":"AL1",
      "date_from":"Aug 2008",
      "date_to":"Aug 2009"
     }
@@ -49,7 +49,7 @@ the given from and to dates, separated by flats(f_avg), terraced homes(t_avg), d
     This API is a HTTP POST request. It provides data for chart 2 in the Backend Code Challenge. The body in request must look like:
     
      {
-      "postcode":"OL5 ",
+      "postcode":"OL5",
       "date":"Jul 2018"
      }
      
