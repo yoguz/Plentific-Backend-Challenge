@@ -2,7 +2,7 @@
  
  ## How to Use:
  
- API URL: https://hidden-ravine-42467.herokuapp.com/api
+ API URL: Not in use anymore
  
  There are 4 API's to use:
  
